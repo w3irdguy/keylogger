@@ -65,7 +65,7 @@ class Program
                 try
                 {
                     File.AppendAllText(_logFilePath, keyChar.ToString(), Encoding.UTF8);
-                    Console.WriteLine($"Logged key: {keyChar}");
+                    Console.WriteLine("Logged key: {keyChar}");
                 }
                 catch (Exception ex)
                 {
