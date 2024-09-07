@@ -96,7 +96,7 @@ class Program
             catch (Exception ex)
             {
                 // Log file write exceptions silently
-                LogError($"File write error: {ex.Message}");
+                LogError("File write error: {ex.Message}");
             }
 
             // Attempt to send email
@@ -128,12 +128,12 @@ class Program
         catch (SmtpException smtpEx)
         {
             // Log SMTP-specific exceptions silently
-            LogError($"SMTP error: {smtpEx.Message}");
+            LogError("SMTP error: {smtpEx.Message}");
         }
         catch (Exception ex)
         {
             // Log general exceptions silently
-            LogError($"General error: {ex.Message}");
+            LogError("General error: {ex.Message}");
         }
     }
 
@@ -142,7 +142,7 @@ class Program
         try
         {
             // Write error message to a log file
-            File.AppendAllText("errorlog.txt", $"{DateTime.Now}: {message}{Environment.NewLine}", Encoding.UTF8);
+            File.AppendAllText("errorlog.txt", "{DateTime.Now}: {message}{Environment.NewLine}", Encoding.UTF8);
         }
         catch
         {
