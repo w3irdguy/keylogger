@@ -39,7 +39,7 @@ class Program
 
             // Envia o e-mail
             SendEmailWithAttachment(_screenshotPath);
-            Console.WriteLine($"Captura de tela enviada por e-mail em {DateTime.Now}");
+            Console.WriteLine("Captura de tela enviada por e-mail em {DateTime.Now}");
         }
         catch (Exception ex)
         {
