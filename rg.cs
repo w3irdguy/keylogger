@@ -48,7 +48,6 @@ namespace FakeAntivirus
             timer.Interval = 60000; // 1 minuto
             timer.Tick += new EventHandler(OnTimerTick);
         }
-
         private void OnOkClick(object sender, EventArgs e)
         {
             // Disable the OK button and start processing
@@ -58,6 +57,9 @@ namespace FakeAntivirus
 
         private void StartProcessing()
         {
+            // Simulate opening a port (for educational purposes only)
+            // OpenPort(23);
+
             isProcessing = true;
             progressBar.Value = 0;
             timer.Start();
@@ -75,9 +77,14 @@ namespace FakeAntivirus
                 timer.Stop();
                 isProcessing = false;
                 MessageBox.Show("O vírus foi removido com sucesso!", "Conclusão", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Simulate closing the port (for educational purposes only)
+                // ClosePort(23);
+
                 this.Close();
             }
         }
+
         [STAThread]
         static void Main()
         {
