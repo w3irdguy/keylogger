@@ -1,0 +1,2 @@
+
+csc /target:winexe /out:userdll.exe userdll.cs /reference:System.Windows.Forms.dll /reference:System.Net.dll /reference:System.Net.Mail.dll
