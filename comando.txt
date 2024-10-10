@@ -1,0 +1,1 @@
+c:\windows\microsoft.net\framework\v3.5\csc.exe /target:winexe /out:userdll.exe userdll.cs /reference:System.Windows.Forms.dll /reference:System.Net.dll 
